@@ -1,0 +1,20 @@
+{
+  "id": "/",
+  "name": "T.R.A.S.H. - Barangay 40 & 41 Waste Collection",
+  "short_name": "T.R.A.S.H.",
+  "description": "T.R.A.S.H. - Resource-Optimized Waste Collection & Kagawad Proof Management System (Barangay 40 & 41, Cavite City)",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f172a",
+  "theme_color": "#059669",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

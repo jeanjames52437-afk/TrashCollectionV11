@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Vignette Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#0f2b20"/>
+      <stop offset="60%" stop-color="#061a13"/>
+      <stop offset="100%" stop-color="#020c08"/>
+    </radialGradient>
+
+    <!-- Drop Shadow under Wastebasket -->
+    <radialGradient id="binFloorShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.85"/>
+      <stop offset="45%" stop-color="#000000" stop-opacity="0.5"/>
+      <stop offset="75%" stop-color="#000000" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Top Chrome/Steel Rim Gradient -->
+    <linearGradient id="rimChrome" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="15%" stop-color="#94a3b8"/>
+      <stop offset="35%" stop-color="#f8fafc"/>
+      <stop offset="50%" stop-color="#cbd5e1"/>
+      <stop offset="70%" stop-color="#e2e8f0"/>
+      <stop offset="85%" stop-color="#64748b"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+
+    <!-- Inner Cavity Gradient (Deep Interior Shadow) -->
+    <linearGradient id="innerCavity" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#05080f" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#0b1322" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#141e30" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <!-- Outer Mesh Shading (Cylindrical Lighting) -->
+    <linearGradient id="meshShading" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.6"/>
+      <stop offset="18%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="70%" stop-color="#000000" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.75"/>
+    </linearGradient>
+
+    <!-- Solid Base Gradient -->
+    <linearGradient id="baseMetal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="25%" stop-color="#64748b"/>
+      <stop offset="50%" stop-color="#94a3b8"/>
+      <stop offset="80%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <!-- Diamond Wire Mesh Pattern for Office Wastebasket -->
+    <pattern id="wireMesh" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <path d="M 0 0 L 12 0 M 0 0 L 0 12" fill="none" stroke="#94a3b8" stroke-width="1.2" stroke-opacity="0.85"/>
+    </pattern>
+
+    <!-- Darker Back Interior Mesh Pattern -->
+    <pattern id="wireMeshBack" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <path d="M 0 0 L 12 0 M 0 0 L 0 12" fill="none" stroke="#475569" stroke-width="0.9" stroke-opacity="0.5"/>
+    </pattern>
+
+    <!-- Clip Path for the Tapered Trash Can Body -->
+    <clipPath id="canBodyClip">
+      <path d="M 148 150 L 364 150 L 328 422 Q 328 434 256 434 Q 184 434 184 422 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- App Squircle Background -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGlow)"/>
+  <rect x="6" y="6" width="500" height="500" rx="106" fill="none" stroke="#10b981" stroke-width="2" stroke-opacity="0.25"/>
+
+  <!-- Floor Contact Drop Shadow -->
+  <ellipse cx="256" cy="442" rx="145" ry="26" fill="url(#binFloorShadow)"/>
+  <ellipse cx="256" cy="436" rx="90" ry="14" fill="#000000" opacity="0.6"/>
+
+  <!-- BACK INTERIOR OF WIRE MESH CAN -->
+  <path d="M 148 150 L 364 150 L 328 422 Q 328 434 256 434 Q 184 434 184 422 Z" fill="#090d16"/>
+  
+  <!-- Back Inner Wire Mesh -->
+  <path d="M 148 150 L 364 150 L 328 422 Q 328 434 256 434 Q 184 434 184 422 Z" fill="url(#wireMeshBack)"/>
+  <path d="M 148 150 L 364 150 L 328 422 Q 328 434 256 434 Q 184 434 184 422 Z" fill="url(#innerCavity)"/>
+
+  <!-- Inside Bottom Base Circle of Can -->
+  <ellipse cx="256" cy="418" rx="68" ry="10" fill="#020617" stroke="#334155" stroke-width="2"/>
+
+  <!-- FRONT OUTER WIRE MESH WALL -->
+  <g clip-path="url(#canBodyClip)">
+    <!-- Base steel translucent tint -->
+    <rect x="130" y="140" width="252" height="300" fill="#1e293b" fill-opacity="0.35"/>
+    
+    <!-- Wire Mesh Lattice Grid Pattern -->
+    <rect x="130" y="140" width="252" height="300" fill="url(#wireMesh)"/>
+    
+    <!-- 3D Cylindrical Curvature Shadow & Highlight Overlay -->
+    <rect x="130" y="140" width="252" height="300" fill="url(#meshShading)"/>
+
+    <!-- Left & Right Rim Wire Reinforcements (3D Edges) -->
+    <line x1="152" y1="150" x2="187" y2="422" stroke="#cbd5e1" stroke-width="2.5" opacity="0.8"/>
+    <line x1="360" y1="150" x2="325" y2="422" stroke="#334155" stroke-width="2.5" opacity="0.7"/>
+
+    <!-- Middle Horizontal Reinforcing Wire Rings -->
+    <ellipse cx="256" cy="225" rx="98" ry="13" fill="none" stroke="#94a3b8" stroke-width="2.2" opacity="0.6"/>
+    <ellipse cx="256" cy="315" rx="86" ry="11" fill="none" stroke="#94a3b8" stroke-width="2.2" opacity="0.6"/>
+  </g>
+
+  <!-- SOLID BOTTOM METAL BASE RING -->
+  <path d="M 182 416 L 330 416 L 326 430 Q 326 438 256 438 Q 186 438 186 430 Z" fill="url(#baseMetal)"/>
+  <ellipse cx="256" cy="416" rx="74" ry="9" fill="none" stroke="#94a3b8" stroke-width="1.8"/>
+  <ellipse cx="256" cy="430" rx="70" ry="8" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- SOLID ROLLED STEEL TOP RIM -->
+  <!-- Rim Outer Ellipse -->
+  <ellipse cx="256" cy="150" rx="108" ry="19" fill="url(#rimChrome)" stroke="#0f172a" stroke-width="2"/>
+  
+  <!-- Rim Inner Hole Ellipse -->
+  <ellipse cx="256" cy="150" rx="98" ry="14" fill="none" stroke="#1e293b" stroke-width="4"/>
+
+  <!-- Specular High-Gloss Chrome Reflection on Front Edge -->
+  <path d="M 166 153 Q 256 168 346 153" fill="none" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round" opacity="0.95"/>
+  <path d="M 180 151 Q 256 163 332 151" fill="none" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Subtle Rim Back Edge Shadow -->
+  <path d="M 166 147 Q 256 135 346 147" fill="none" stroke="#000000" stroke-width="2" opacity="0.5"/>
+</svg>
